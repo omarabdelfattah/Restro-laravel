@@ -1,4 +1,8 @@
 
+@extends('out_site.home')
+
+
+@section('main_content')
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #D58206;">
     <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -63,7 +67,7 @@
       </div>
     </div>
 </div>
-
+@stop
 
 
 

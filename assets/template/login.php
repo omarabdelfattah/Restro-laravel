@@ -1,75 +1,38 @@
-<?php
+<?php include("navbar.php"); ?>
+<section class="vh-100 bg-image" style="background-image: url('images\plant-based-news-burger-1-scaled.jpg');">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center py-3">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5">Sign in</h2>
 
-ob_start();
+              <form>
+              <div class="form-outline mb-4">
 
-$page_title = 'Login';
-// Include connection file
-require('config.php');
+                    <label class="form-label" for="form3Example3cg"> Email</label>
+                    <input type="email" id="form3Example3cg" class="form-control form-control-lg" />
+                </div>
+                <div class="form-outline mb-4">
 
-  // Require navbar
-  require("navbar.php");
+                  <label class="form-label" for="form3Example4cg">Password</label>
+                  <input type="password" id="form3Example4cg" class="form-control form-control-lg" />
+                </div>
+                <div class="d-flex ">
+                  <button type="button" class="btn  btn-block btn-lg gradient-custom-4 text-body">Login</button>
+                </div>
+                <p class="text-center text-muted mt-5 mb-0">Don't have an account? <a href="#!"
+                    class="fw-bold text-body"><u>Register here</u></a></p>
 
-
- // Check if logged in redirect
- if(isset($_SESSION['id'])){
-    header("location:index.php");
-}
-
-
-
-
-// Check if method is POST
-if($_SERVER['REQUEST_METHOD'] == "POST"){
-    // CHECK IF All fields exits
-    if( isset($_POST['email']) && isset($_POST['password']) ){
-
-        $email = $_POST['email'] ;
-        $password = $_POST['password'];
-
-        $result = $conn->query("SELECT id,name FROM users WHERE email = '$email' AND password = '$password' ");
-         if($result->num_rows > 0){
-             // Logged in
-
-             $result = $result->fetch_array(MYSQLI_ASSOC);
-              $_SESSION['id'] = $result['id'];
-             $_SESSION['name'] = $result['name'];
-             $_SESSION['loggedin'] = true;
-             $_SESSION['email'] = $email;
-            header('Location:index.php');
-        }else{
-           header('Location:login.php?st=f');
-        }
-     }
-}
-
-?>
-<div class="vh-100">
-    <div class="col-md-4 login-form-1 " style="margin: auto; margin-top: 20px;">
-        <h3>Login</h3>
-        <?php if( isset($_GET['st']) && $_GET['st']  == "f" ){ ?>
-        <h5 class="text-danger text-center">Email or password are invalid</h5>
-        <?php } ?>
-        <form method="POST">
-            <div class="form-group">
-                <input type="text" name="email" class="form-control" placeholder="Your Email *" value="" />
-            </div>
-            <div class="form-group">
-                <input type="password" name="password" class="form-control" placeholder="Your Password *" value="" />
-            </div>
-            <div class="form-group" style="text-align: center;">
-                <input type="submit" class="btnSubmit" value="Login" />
-            </div>
-            <div class="form-group">
-                <a href="#" class="ForgetPwd">Forget Password? </a>
-                <a href="register.php" class="ForgetPwd" style="margin-left: 45%;">Register </a>
-            </div>
-        </form>
+              </form>
+              </div>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
-<?php 
+  </div>
+</section>
 
 
-    // Require footer
-    require("footer.php");
-
-?>
+<?php include("footer.php"); ?>

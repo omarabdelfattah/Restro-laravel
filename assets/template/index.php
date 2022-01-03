@@ -1,110 +1,75 @@
-<?php
+<?php include("navbar.php"); ?>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #D58206;">
+    <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
+      <div class="collapse navbar-collapse collapse show" id="navbarSupportedContent">
+        <ul class="navbar-nav" style = "margin: auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.php" style="margin-left: 60px;">All <span class="sr-only">(current)</span></a>
+          </li>
 
-  $page_title = 'Home Page';
-  // Include connection file
-  require('config.php');
+          
 
-  // Get last 6 products 
-  $sql = "SELECT * FROM products  ORDER BY id DESC LIMIT 6 ";
-  $result = $conn->query($sql);
- 
-  if (!empty($result) && $result->num_rows > 0) {
-      // output data of each row
-      $result = $result->fetch_all(MYSQLI_ASSOC);
-      $last_6_products = $result;
-  }  
+          <li class="nav-item active">
+            <a class="nav-link" href="tables.php" style="margin-left: 60px;">Pizza</a>
+          </li>
 
-    // Check if there's a search key
-    $search_key = !empty($_GET['k']) ? "AND name LIKE '%". $_GET['k']. "%'  " : " ";
+          <li class="nav-item active">
+            <a class="nav-link" href="offers.php" style="margin-left: 60px;">Pasta</a>
+          </li>
 
-     // Check if there's a chosen category
-     $cat_id = !empty($_GET['cat']) ? "AND cat_id = ".$_GET['cat'] : " ";
+          <li class="nav-item active">
+            <a class="nav-link" href="offers.php" style="margin-left: 60px;">Burger</a>
+          </li>
 
-     if(isset($_GET['cat'])){
-      $result = $conn->query("SELECT name FROM categories WHERE id = ". $_GET['cat']);
-      $result = $result->fetch_array();
-      $cat_name = $result['name'];
-    }else{
-      $cat_name = "";
-    }
+          <li class="nav-item active">
+            <a class="nav-link" href="offers.php" style="margin-left: 60px;">Deserts</a>
+          </li>
 
-    // Get 9 random products 
-    $sql = "SELECT * FROM products WHERE 1=1 $cat_id  $search_key ORDER BY RAND()  DESC LIMIT 9 ";
-    $products = [];
-     $result = $conn->query($sql);
-    if (!empty($result) && $result->num_rows > 0) {
-        // output data of each row
-        $result = $result->fetch_all(MYSQLI_ASSOC);
-        $products = $result;
-    } 
-
-    // Require navbar
-    require("navbar.php");
-
-?>
-
-  <!-- Start Slider -->
-  <div class="slider">
-    <div class="owl-carousel owl-theme owl-loaded">
-      <div class="owl-stage-outer">
-        <div class="owl-stage">
-          <?php 
-          foreach($last_6_products as $product){
-        ?>
-          <div class="owl-item">
-          <a href="product.php?product_id=<?php echo $product['id'] ?>">
-
-            <div class="product_image">
-              <img src="images/products/<?php echo $product['img'] ?>">
-            </div>
-            <div class="product_title">
-              <a href="product.php?product_id=<?php echo $product['id'] ?>"><?php echo $product['name'] ?></a>
-            </div>
-            </a>
-          </div>
-          <?php } ?>
-        </div>
+          <li class="nav-item active">
+            <a class="nav-link" href="offers.php" style="margin-left: 60px;">Drinks</a>
+          </li>
+        </ul>
+        
       </div>
-      <div class="owl-nav">
-        <div class="owl-play play">Play</div>
-        <div class="owl-stop stop">Stop</div>
-      </div>
-
     </div>
-  </div>
-  <!-- End Slider -->
-  <!--products display-->
-  <div class="container ">
-    <div class="product  ">
-      <h3 class="text-left py-2" id="pro"><?php echo isset($cat_name) ? $cat_name : "Products" ; ?> </h3>
+  </nav>
+<!--the slider should start here-->
+
+<!--the slider should end here-->
+
+<div class="container ">
+    <div class="product t py-2 ">
+      <h3 class="text-lef" id="pro">All </h3>
       <div class="row justify-content-center text-left">
-        <?php 
-            if(!empty($products)){
-            foreach($products as $product){
-          ?> 
-        <div class="card col-md-3 text-center" style="">
-          <a href="product.php?product_id=<?php echo $product['id'] ?>">    
-            <img src="images/products/<?php echo $product['img'] ?>" class="card-img-top" alt="...">
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title"><?php echo $product['name'] ?></h5>
-                <p class="card-text"><?php echo $product['price'] ?> L.E <br>
-                </p>
-                <a href="product.php?product_id=<?php echo $product['id'] ?>" class="btn btn-primary buy-button  ">Buy now</a>
-              </div>
-          </a>    
+        
+        <div class="card col-md-4 text-center" style="">
+          <img class="card-img-top" src="assets\pics\images (1).jpg" alt="Card image cap" style="margin-top : 20px;">
+          <div class="card-body">
+          <h5 class="card-title">Pizza</h5>
+          <div class="input-group">
+          <input type="text" class="form-control" placeholder="Add your notes here" aria-label="Recipient's username" aria-describedby="basic-addon2">
+          </div>
+          <p class="card-text" style="margin: 20px;">25$ <input type="number" value="1" min="1" max="1000" step="1" id="spinner" style="width: 50%;"/> </p>
+          
+          <a href="#" class="btn" style="background-color: #FF9900; color:white;">Add</a>
+          </div>
         </div>
-        <?php }}else{
-          ?>
-            <center>No products found</center>
-          <?php
-        } ?>
 
       </div>
     </div>
-  </div>
+</div>
 
-<?php 
-    // Require footer
-    require('footer.php');
-?>
+
+
+
+
+
+
+
+
+<?php include("footer.php"); ?>

@@ -52,7 +52,7 @@
       <div class="row justify-content-center text-left">
         
         <div class="card col-md-4 text-center" style="">
-          <img class="card-img-top" src="assets\pics\images (1).jpg" alt="Card image cap" style="margin-top : 20px;">
+          <img class="card-img-top" src="{{asset("assets\template\assets\pics\images (1).jpg")}}" alt="Card image cap" style="margin-top : 20px;">
           <div class="card-body">
           <h5 class="card-title">Pizza</h5>
           <div class="input-group">

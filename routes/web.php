@@ -18,10 +18,10 @@ use App\Http\Controllers\categories;
 |
 */
 
-// Route::get('/', function () {
-//     // return view('welcome');
-//     return view('gahez');
-// });
+Route::get('gahez', function () {
+    // return view('welcome');
+    return view('gahez');
+});
 
 Route::get("/",             [landing::class,'index']          )->name('landing');
 Route::get("/offers",       [offers::class,'index']            )->name('offers');

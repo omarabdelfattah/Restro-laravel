@@ -33,17 +33,17 @@
 
         <ul class="navbar-nav" style = "margin: auto">
           <li class="nav-item active">
-            <a class="nav-link" href="index.php" style="margin-left: 60px;">Food <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="{{ Route('landing') }}" style="margin-left: 60px;">Food <span class="sr-only">(current)</span></a>
           </li>
 
           
 
           <li class="nav-item active">
-            <a class="nav-link" href="tables.php" style="margin-left: 60px;">Tables</a>
+            <a class="nav-link" href="{{ Route('tables') }}" style="margin-left: 60px;">Tables</a>
           </li>
 
           <li class="nav-item active">
-            <a class="nav-link" href="offers.php" style="margin-left: 60px;">Offers</a>
+            <a class="nav-link" href="{{ Route('offers') }}" style="margin-left: 60px;">Offers</a>
           </li>
 
         </ul>

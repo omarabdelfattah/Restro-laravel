@@ -9,7 +9,7 @@ class offers extends Controller
 {
     public function index(){
         $offers  = offersM::latest()->take(10)->get();   
-        $page_title = "العروض";
+        $page_title = "Our Offers";
         return view('pages.offers')->with('page_title',$page_title)->with('offers',$offers);
     }  
 }

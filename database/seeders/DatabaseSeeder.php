@@ -18,14 +18,8 @@ class DatabaseSeeder extends Seeder
 
             categories::class,
             food::class,
-
-
-
-
-
-
-
-        tables::class,
+            tables::class,
+            users::class,
         ]);
     }
 }

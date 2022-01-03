@@ -1,4 +1,7 @@
+@extends('out_site.home')
 
+
+@section('main_content')
 <section class="vh-100 bg-image" style="background-image: url('images\plant-based-news-burger-1-scaled.jpg');">
   <div class="mask d-flex align-items-center h-100 gradient-custom-3">
     <div class="container h-100">
@@ -95,5 +98,5 @@
     </div>
   </div>
 </section>
-
+@stop
 

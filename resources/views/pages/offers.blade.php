@@ -1,9 +1,8 @@
-<!Doctype html>
-<html>
-<title> Offers section </title>
+@extends('out_site.home')
 
-<body class="bd">
-  
+
+@section('main_content')
+
 
   <div class="container">
     <div class="product t py-2 ">
@@ -56,3 +55,4 @@
     </div>
   </div>
   </div>
+  @stop

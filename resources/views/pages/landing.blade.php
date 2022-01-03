@@ -60,7 +60,7 @@
           <div class="input-group">
           <input type="text" class="form-control" placeholder="Add your notes here" aria-label="Recipient's username" aria-describedby="basic-addon2">
           </div>
-          <p class="card-text" style="margin: 20px;">{{ $meal->price }} $ <input type="number" value="1" min="1" max="1000" step="1" id="spinner" style="width: 50%;"/> </p>
+          <p class="card-text" style="margin: 20px;">{{ $meal->price }} $ <input type="number" value="1" min="1" max="1000" step="1" class="spinner" style="width: 50%;"/> </p>
           
           <a href="#" class="btn" style="background-color: #FF9900; color:white;">Add</a>
           </div>

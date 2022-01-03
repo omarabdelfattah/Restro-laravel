@@ -29,3 +29,4 @@ Route::get("/tables",       [tables::class,'index']            )->name('tables')
 Route::get("/cat/{id}",     [categories::class,'categories']    );
 Route::get("/login",        [account::class,'login']            )->name('login');
 Route::get("/register",     [account::class,'register']         )->name('register');
+

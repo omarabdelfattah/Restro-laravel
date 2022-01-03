@@ -9,7 +9,7 @@ class tables extends Controller
 {
     public function index(){
         $tables  = tablesM::latest()->take(10)->get();   
-        $page_title = "العروض";
+        $page_title = "Reservation";
         return view('pages.tables')->with('page_title',$page_title)->with('tables',$tables);
     }  
 }

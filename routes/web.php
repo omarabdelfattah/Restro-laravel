@@ -27,6 +27,10 @@ Route::get("/",             [landing::class,'index']          )->name('landing')
 Route::get("/offers",       [offers::class,'index']            )->name('offers');
 Route::get("/tables",       [tables::class,'index']            )->name('tables');
 Route::get("/cat/{id}",     [categories::class,'categories']    );
-Route::get("/login",        [account::class,'login']            )->name('login');
-Route::get("/register",     [account::class,'register']         )->name('register');
+
+Route::get("/login",        [account::class,'Showlogin']            )->name('login');
+Route::post("/login",        [account::class,'login']            )->name('login');
+
+Route::get("/register",     [account::class,'Showregister']         )->name('register');
+Route::post("/register",     [account::class,'register']         )->name('register');
 

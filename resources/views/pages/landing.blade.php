@@ -1,5 +1,5 @@
 
-@extends('out_site.home')
+@extends('home')
 
 
 @section('main_content')

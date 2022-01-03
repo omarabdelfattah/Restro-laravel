@@ -14,23 +14,23 @@
                     <h4>keep Connected</h4>
                     <div class="text-left">
                         <div class="footer-icon  ">
-                            <img src="{{assets("assets/templates/assets/facebook.png")}}" alt="facebook">
+                            <img src="{{asset("assets/templates/assets/facebook.png")}}" alt="facebook">
                             <p>Like us on Facebook</p>
                         </div>
                         <div class="footer-icon ">
-                            <img src="{{assets("assets/templates/assets/twitter.png")}}" alt="twitter">
+                            <img src="{{asset("assets/templates/assets/twitter.png")}}" alt="twitter">
                             <p>Follow us on Twitter</p>
                         </div>
                         <div class="footer-icon ">
-                            <img src="{{assets("assets/templates/assets/instagram.png")}}" alt="instagram">
+                            <img src="{{asset("assets/templates/assets/instagram.png")}}" alt="instagram">
                             <p>Follow us on Instagram</p>
                         </div>
                         <div class="footer-icon ">
-                            <img src="{{assets("assets/templates/assets/pinterest.png")}}" alt="pinterest">
+                            <img src="{{asset("assets/templates/assets/pinterest.png")}}" alt="pinterest">
                             <p>Follow us on Pinterest</p>
                         </div>
                         <div class="footer-icon ">
-                            <img src="{{assets("assets/templates/assets/whatsapp.png")}}" alt="whatsapp">
+                            <img src="{{asset("assets/templates/assets/whatsapp.png")}}" alt="whatsapp">
                             <p>Message us on Whatsapp</p>
                         </div>
                     </div>
@@ -71,10 +71,10 @@
             </div>
         </section>
     </footer>
-    <script src="{{assets("assets\template\js\jquery-3.6.0.min.js")}}"></script>
-    <script src="{{assets("assets\template\js\popper.min.js")}}"></script>
-    <script src="{{assets("assets\template\js\bootstrap.min.js")}}"></script>
-    <script src="{{assets("assets\template\js\bootstrap-input-spinner.js")}}"></script>
-    <script src="{{assets("assets\template\js\script.js")}}"></script>
+    <script src="{{asset('assets\template\js\jquery-3.6.0.min.js')}}"></script>
+    <script src="{{asset('assets\template\js\popper.min.js')}}"></script>
+    <script src="{{asset('assets\template\js\bootstrap.min.js')}}"></script>
+    <script src="{{asset('assets\template\js\bootstrap-input-spinner.js')}}"></script>
+    <script src="{{asset('assets\template\js\script.js')}}"></script>
 </body>
 </html>

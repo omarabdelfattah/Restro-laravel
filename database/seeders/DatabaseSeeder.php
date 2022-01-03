@@ -25,8 +25,7 @@ class DatabaseSeeder extends Seeder
 
 
 
-
-
-            ]);
+        tables::class,
+        ]);
     }
 }

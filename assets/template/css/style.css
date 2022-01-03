@@ -1,105 +1,117 @@
- 
-.dropdown-item {
-    padding: 0.25rem 0.8rem;
+body {
+  margin: 0px;
 }
-a,
-a:hover{
-    text-decoration: none;
+.footerall {
+  color: #707070;
+  background-color: #282828;
+  overflow-x: hidden;
 }
-.slider{
-    padding: 23px 0;
-}
-.slider_wrapper{
-    margin: auto;
-}
-.bg-dark
-{
-  background-color: #1C1252!important;
-}
-.up_nav
-{
-  background-color: rgb(10, 10, 31) !important;
-}
-.socialMedia
-{
-    width: 20px;
-    height: 20px;
-    margin-left: 2px ;
-}
-.follow
-{
-    color: white;
-}
-.slider .product_box{
-    display: block;
-    position: relative;
-    background-color: #f0f0f0;
-}
-.slider .owl-carousel .owl-item img  {
-    max-height: 340px;
-    /* max-width: 289px; */
-}    
-.slider .owl-item{
-    margin: auto;
-    overflow: hidden;
-}
-.slider .product_image {
-    min-height: 340px;
+.footerall img {
+  /* width: 35px;
+  height: 35px; */
+      max-width: 9%;
+      margin-right: 16px;
 
 }
-.slider .product_title{
-    text-align: center;
-    position: relative;
-    bottom: 0;
+.footer-part1 {
+  /* display: flex;
+  justify-content: space-evenly; */
+  /* background-color: #282828; */
+  padding: 22px 0;
+}
+h4 {
+  color: #ff9900;
+  font-size: 21px;
+}
+.ceo {
+  padding-left: 270px;
 }
 
-.product .card
-{
+.footer-icon {
+  /* display: flex; */
+  margin: 10px 0px;
+}
+.footer-icon * {
   display: inline-block;
-  margin: 17px;
+}
+.footer-icon img {
+  /* margin-right: 10px; */
+}
+/* .footer-part1-3 img {
+  width: 35px;
+  height: 35px;
+} */
+/****************** part 2*********************************/
+.footer-part2 {
+  background-color: #221e1b;
+  /* height: 75px;
+  display: flex;
+  justify-content: space-evenly; */
+  padding: 15px;
+}
+.footer-part2 * {
+  /* margin: 15px; */
+  display: inline-block;
+}
+.line {
+  width: 1px;
+  height: 14px;
+  background-color: #707070;
+  margin: 0 4px;
+  position: relative;
+  top: 2px;
 
 }
- 
-.card .card-body{
-    position: relative;
-    bottom: 0;
+/* .footer-part2-1 {
+  display: flex;
+  justify-content: space-between;
 }
-.card   img{
-   min-height: 253px;
+.footer-part2-2 {
+  display: flex;
+  justify-content: center;
+} */
+.gradient-custom-3 {
+  /* fallback for old browsers */
+  background: #FF9900;
 
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: black;
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: whitesmoke;
 }
-.login-container{
-    margin-top: 5%;
-    margin-bottom: 5%;
+.gradient-custom-4 {
+  /* fallback for old browsers */
+  background: #FF9900
+  ;
+color:#fff;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: #FF9900;
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #FF9900;
 }
-.login-form-1{
-    padding: 5%;
-    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
-}
-.login-form-1 h3{
-    text-align: center;
-    color: #333;
+.gradient-custom-4:hover,
+.gradient-custom-4:active,
+.gradient-custom-4:focus,
+.gradient-custom-4:visited {
+  background: #d37e00;
 }
 
-.login-container form{
-    padding: 10%;
-}
-.btnSubmit
+.offer
 {
-    width: 50%;
-    border-radius: 1rem;
-    padding: 1.5%;
-    border: none;
-    cursor: pointer;
-}
-.login-form-1 .btnSubmit{
-    font-weight: 600;
-    color: #fff;
-    background-color: #0062cc;
+    margin: 17px;
+    padding: 10px 0;
+
 }
 
-.login-form-1 .ForgetPwd{
-    color: #0062cc;
-    font-weight: 600;
-    text-decoration: none;
+.offer img{
+   /* width: 18rem; */
+   max-height: 253px;
+   max-width: 253px;
+}   
+.product .card,
+.offer .card{
+  width: 18rem; border: 3px solid #FF9900;
 }

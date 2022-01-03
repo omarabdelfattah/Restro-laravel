@@ -22,7 +22,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #FF9900; margin: bottom 5px;">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img src="{{asset("assets\template\images\logo.png")}}" width="70" height="70" alt="" style="margin-right: 50px;">
+          <img src="{{asset("assets/template/images/logo.png")}}" width="70" height="70" alt="" style="margin-right: 50px;">
         </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

@@ -14,23 +14,23 @@
                     <h4>keep Connected</h4>
                     <div class="text-left">
                         <div class="footer-icon  ">
-                            <img src="{{asset("assets/templates/assets/facebook.png")}}" alt="facebook">
+                            <img src="{{asset("assets/template/assets/facebook.png")}}" alt="facebook">
                             <p>Like us on Facebook</p>
                         </div>
                         <div class="footer-icon ">
-                            <img src="{{asset("assets/templates/assets/twitter.png")}}" alt="twitter">
+                            <img src="{{asset("assets/template/assets/twitter.png")}}" alt="twitter">
                             <p>Follow us on Twitter</p>
                         </div>
                         <div class="footer-icon ">
-                            <img src="{{asset("assets/templates/assets/instagram.png")}}" alt="instagram">
+                            <img src="{{asset("assets/template/assets/instagram.png")}}" alt="instagram">
                             <p>Follow us on Instagram</p>
                         </div>
                         <div class="footer-icon ">
-                            <img src="{{asset("assets/templates/assets/pinterest.png")}}" alt="pinterest">
+                            <img src="{{asset("assets/template/assets/pinterest.png")}}" alt="pinterest">
                             <p>Follow us on Pinterest</p>
                         </div>
                         <div class="footer-icon ">
-                            <img src="{{asset("assets/templates/assets/whatsapp.png")}}" alt="whatsapp">
+                            <img src="{{asset("assets/template/assets/whatsapp.png")}}" alt="whatsapp">
                             <p>Message us on Whatsapp</p>
                         </div>
                     </div>
@@ -39,17 +39,17 @@
                     <h4>Contact Information</h4>
                     <div class="text-left">
                         <div class="footer-icon">
-                            <img src="assets/home (1).png" alt="home">
+                            <img src="{{asset("assets/template/assets/home (1).png")}}" alt="home">
                             <p>4th Floor, Plot No.22,<br>
                                 145 Murphy Canyon Rd.<br>
                                 San Diego CA 2028</p>
                         </div>
                         <div class="footer-icon">
-                            <img src="assets/email.png" alt="email">
+                            <img src="{{asset("assets/template/assets/email.png")}}" alt="email">
                             <p>restro.smarto@gmsil.com</p>
                         </div>
                         <div class="footer-icon">
-                            <img src="assets/smartphone.png" alt="smartphone">
+                            <img src="{{asset("assets/template/assets/smartphone.png")}}" alt="smartphone">
                             <p>(060) 444 434 444</p>
                         </div>
                     </div>

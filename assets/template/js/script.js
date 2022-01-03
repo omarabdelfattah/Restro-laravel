@@ -9,6 +9,6 @@ $(document).ready(function(){
                 $('.count').val(1);
             }
         });
-        $("#spinner").inputSpinner()
+        $(".spinner").inputSpinner()
  });
 

@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="{{asset('assets/template/css/owl.theme.default.min.css')}}">
   <link rel="stylesheet" href="{{asset('assets/template/css/font-awesome.min.css')}}">
   <link rel="stylesheet" href="{{asset('assets/template/css/style.css')}}">
-  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">  
+  <link rel="shortcut icon" href="{{asset("assets/template/images/logo.png")}}" type="image/x-icon">  
   <title><?php echo $page_title; ?></title>
  <style>
 
@@ -33,17 +33,17 @@
 
         <ul class="navbar-nav" style = "margin: auto">
           <li class="nav-item active">
-            <a class="nav-link" href="index.php" style="margin-left: 60px;">Food <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="resources\views\pages\landing.blade.php" style="margin-left: 60px;">Food <span class="sr-only">(current)</span></a>
           </li>
 
           
 
           <li class="nav-item active">
-            <a class="nav-link" href="tables.php" style="margin-left: 60px;">Tables</a>
+            <a class="nav-link" href="resources\views\pages\tables.blade.php" style="margin-left: 60px;">Tables</a>
           </li>
 
           <li class="nav-item active">
-            <a class="nav-link" href="offers.php" style="margin-left: 60px;">Offers</a>
+            <a class="nav-link" href="resources\views\pages\offers.blade.php" style="margin-left: 60px;">Offers</a>
           </li>
 
         </ul>

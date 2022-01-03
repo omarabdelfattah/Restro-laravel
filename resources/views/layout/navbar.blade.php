@@ -58,10 +58,10 @@
         <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true  ) { ?>
           <a class="dropdown-item" href="#"><i class="fa fa-user" aria-hidden="true"></i> profile</a>
           <a class="dropdown-item" href="#"><i class="fa fa-key" aria-hidden="true"></i> change password</a>
-          <a class="dropdown-item" href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> sign out</a>
+          <a class="dropdown-item" href="{{ Route('logout') }}"><i class="fa fa-sign-out" aria-hidden="true"></i> sign out</a>
         <?php }else{ ?>        
-            <a class="dropdown-item" href="login.php"><i class="fa fa-user" aria-hidden="true"></i> Login</a>
-            <a class="dropdown-item" href="register.php"><i class="fa fa-user" aria-hidden="true"></i> Register</a>
+            <a class="dropdown-item" href="{{ Route('login') }}"><i class="fa fa-user" aria-hidden="true"></i> Login</a>
+            <a class="dropdown-item" href="{{ Route('register') }}"><i class="fa fa-user" aria-hidden="true"></i> Register</a>
         <?php } ?>
         </div>
       </div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\paymentsM;
 
 class account extends Controller
 {
@@ -19,9 +20,6 @@ class account extends Controller
         }else{
             return redirect()->back()->withErrors('Email or password is incorrect');
         }
-
-
-    
     }   
 
     public function logout(){
@@ -37,9 +35,13 @@ class account extends Controller
 
     public function register(Request $request){
         // return $request;
+        $request['password'] = bcrypt($request->password);
         $user = User::create($request->all());
-        auth()->login($user);
-        return redirect()->Route('landing')->withSuccess('Registered successfully');
-
+        $payments = paymentsM::create([ 'credit_card' => $request->credit_card , 'user_id' => $user->id]);
+        if(auth()->login($user) ) {
+            return redirect()->Route('landing')->withSuccess('Registered successfully');
+        }else{
+            return redirect()->back()->withErrors('Please insert all informations');
+        }
     }   
 }

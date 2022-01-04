@@ -14,29 +14,29 @@ class categories extends Seeder
     public function run()
     {
         categoriesM::create(array(
-            "name"=>"burger"  ,
+            "name"=>"Burger"  ,
 
 
            ));
 
            categoriesM::create(array(
-            "name"=>"drinks"  ,
+            "name"=>"Drinks"  ,
 
            ));
 
            categoriesM::create(array(
-            "name"=>"deserts"  ,
+            "name"=>"Deserts"  ,
 
            ));
 
 
            categoriesM::create(array(
-            "name"=>"basta"  ,
+            "name"=>"Basta"  ,
 
            ));
 
            categoriesM::create(array(
-            "name"=>"pizza"  ,
+            "name"=>"Pizza"  ,
 
            ));
     }

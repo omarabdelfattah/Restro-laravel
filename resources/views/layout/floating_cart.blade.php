@@ -49,7 +49,7 @@
                     </div>
                     <div class="d-flex justify-content-around m-4">
                         @if( auth()->check() )
-                            <input class="btnn in1" type="button" value="Confirm">
+                            <a href="{{ Route('checkout') }}"><input class="btnn in1" type="button" value="Confirm"></a>
                         @else
                             <button class="btnn in1" type="button" value="">Login to continue</button>
                         @endif

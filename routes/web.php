@@ -7,6 +7,7 @@ use App\Http\Controllers\offers;
 use App\Http\Controllers\tables;
 use App\Http\Controllers\categories;
 use App\Http\Controllers\cart;
+use App\Http\Controllers\checkout;
 
 /*
 |--------------------------------------------------------------------------

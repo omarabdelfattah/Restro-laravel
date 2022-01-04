@@ -15,3 +15,6 @@ $(document).ready(function(){
           });
  });
 
+ $("#open_cart").on("click",function(){
+    $(".floating_cart").toggle();
+ });

@@ -30,7 +30,10 @@ Route::get("/",             [landing::class,'index']       )->name('landing');
 Route::get("/offers",       [offers::class,'index']        )->name('offers');
 Route::get("/tables",       [tables::class,'index']        )->name('tables');
 Route::get("/cat/{id}",     [categories::class,'index']    )->name('cat');
+
 Route::post("/add_to_cart", [cart::class,    'add_to_cart']      )->name('add_to_cart');
+Route::get("/remove_from_cart/{id}", [cart::class,    'remove_from_cart']      )->name('remove_from_cart');
+Route::get("/remove_all", [cart::class,    'remove_all']      )->name('remove_all');
 
 Route::group(['middleware' => 'guest' ],function(){
     Route::get("/login",            [account::class,    'Showlogin']            )->name('login');

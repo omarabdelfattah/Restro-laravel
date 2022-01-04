@@ -2,6 +2,7 @@
 
 
 @section('main_content')
+@include('layout.floating_cart')
 
 @if(Session::get('success'))
   <script>

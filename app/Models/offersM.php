@@ -10,4 +10,8 @@ class offersM extends Model
     use HasFactory;
     protected $table  = "offers";
     protected $guarded = ['id'];
+
+    public function food(){
+        return $this->belongsTo(foodM::class,"food_id","id");
+    }
 }

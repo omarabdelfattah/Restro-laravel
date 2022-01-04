@@ -55,14 +55,14 @@
           <i class="fa fa-user-circle" aria-hidden="true"></i> My Account
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width: 170px;">
-        <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true  ) { ?>
-          <a class="dropdown-item" href="#"><i class="fa fa-user" aria-hidden="true"></i> profile</a>
-          <a class="dropdown-item" href="#"><i class="fa fa-key" aria-hidden="true"></i> change password</a>
+        @if(auth()->check())
+          <!-- <a class="dropdown-item" href="#"><i class="fa fa-user" aria-hidden="true"></i> profile</a>
+          <a class="dropdown-item" href="#"><i class="fa fa-key" aria-hidden="true"></i> change password</a> -->
           <a class="dropdown-item" href="{{ Route('logout') }}"><i class="fa fa-sign-out" aria-hidden="true"></i> sign out</a>
-        <?php }else{ ?>        
+        @else       
             <a class="dropdown-item" href="{{ Route('login') }}"><i class="fa fa-user" aria-hidden="true"></i> Login</a>
             <a class="dropdown-item" href="{{ Route('register') }}"><i class="fa fa-user" aria-hidden="true"></i> Register</a>
-        <?php } ?>
+        @endif
         </div>
       </div>
         

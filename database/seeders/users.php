@@ -20,6 +20,7 @@ class users extends Seeder
             'password' => bcrypt(1234),
             'location'    => 'el shatby',
             'phone'    => '0123456789',
+            'gender'    => 0,
         ));
         User::create(array(
             'name'     => 'Ahmed',
@@ -27,6 +28,7 @@ class users extends Seeder
             'password' => bcrypt(1234),
             'location'    => 'el raml',
             'phone'    => '01048274674',
+            'gender'    => 1,
         ));
     }
 }

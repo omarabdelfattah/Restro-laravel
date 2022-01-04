@@ -14,31 +14,15 @@
       <div class="collapse navbar-collapse collapse show" id="navbarSupportedContent1">
         <ul class="navbar-nav" style = "margin: auto">
           <li class="nav-item active">
-            <a class="nav-link" href="index.php" style="margin-left: 60px;">All <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="{{ Route('landing') }}" style="margin-left: 60px;">All <span class="sr-only">(current)</span></a>
           </li>
 
           
-
+        @foreach($categories as $cat)
           <li class="nav-item active">
-            <a class="nav-link" href="tables.php" style="margin-left: 60px;">Pizza</a>
+            <a class="nav-link" href="{{ Route('cat',$cat['id']) }}" style="margin-left: 60px;">{{ $cat['name'] }}</a>
           </li>
-
-          <li class="nav-item active">
-            <a class="nav-link" href="offers.php" style="margin-left: 60px;">Pasta</a>
-          </li>
-
-          <li class="nav-item active">
-            <a class="nav-link" href="offers.php" style="margin-left: 60px;">Burger</a>
-          </li>
-
-          <li class="nav-item active">
-            <a class="nav-link" href="offers.php" style="margin-left: 60px;">Deserts</a>
-          </li>
-
-          <li class="nav-item active">
-            <a class="nav-link" href="offers.php" style="margin-left: 60px;">Drinks</a>
-          </li>
-        </ul>
+        @endforeach
         
       </div>
     </div>

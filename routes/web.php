@@ -23,14 +23,20 @@ Route::get('gahez', function () {
     return view('gahez');
 });
 
+
+
 Route::get("/",             [landing::class,'index']          )->name('landing');
 Route::get("/offers",       [offers::class,'index']            )->name('offers');
 Route::get("/tables",       [tables::class,'index']            )->name('tables');
-Route::get("/cat/{id}",     [categories::class,'categories']    );
+Route::get("/cat/{id}",     [categories::class,'index']    )->name('cat');
 
-Route::get("/login",        [account::class,'Showlogin']            )->name('login');
-Route::post("/login",        [account::class,'login']            )->name('login');
+Route::group(['middleware' => 'guest' ],function(){
+    Route::get("/login",            [account::class,    'Showlogin']            )->name('login');
+    Route::post("/login",           [account::class,    'login']                )->name('login');
+    Route::get("/register",         [account::class,    'Showregister']         )->name('register');
+    Route::post("/register",        [account::class,    'register']             )->name('register');
+});
 
-Route::get("/register",     [account::class,'Showregister']         )->name('register');
-Route::post("/register",     [account::class,'register']         )->name('register');
-
+Route::group(['middleware' => 'auth' ],function(){
+    Route::get("/logout",     [account::class,'logout']         )->name('logout');
+});

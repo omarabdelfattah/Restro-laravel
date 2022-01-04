@@ -2,79 +2,78 @@
 
 
 @section('main_content')
-<div class="checkout">
-    <div class="bkgroud">
-
-
-        <div class="p-5">
-            <div>
-                <h3>Order Summary</h3>
-            </div>
-
-
-            <div class="d-flex justify-content-center text-center">
-                <div class="col-md-2">
-                    <h5>Item(s)</h5>
+<form method="POST" action="{{Route('checkout')}}">
+    {{ csrf_field() }}
+    <div class="checkout">
+        <div class="bkgroud">
+            @if(Cart::count() > 0 )
+            <div class="p-5">
+                <div>
+                    <h3>Order Summary</h3>
                 </div>
-                <!-- <div class="col-md-3">
+
+
+                <div class="d-flex justify-content-center text-center">
+                    <div class="col-md-2">
+                        <h5>Item(s)</h5>
+                    </div>
+                    <!-- <div class="col-md-3">
                     <h5>Special Request</h5>
                 </div> -->
-                <div class="col-md-2">
-                    <h5>Qty</h5>
+                    <div class="col-md-2">
+                        <h5>Qty</h5>
+                    </div>
+                    <div class="col-md-2">
+                        <h5>Price(s)</h5>
+                    </div>
+                    <div class="col-md-2">
+                        <h5>Subtotal</h5>
+                    </div>
+                    <div class="col-md-2">
+                        <h5>Total</h5>
+                    </div>
                 </div>
-                <div class="col-md-2">
-                    <h5>Price(s)</h5>
+
+
+                @foreach(Cart::content() as $row)
+                <div class="d-flex justify-content-center text-center">
+                    <div class="col-md-2">
+                        <p>{{  $row->name  }}</p>
+                    </div>
+
+
+                    <div class="col-md-2">
+                        <p>{{  $row->qty  }}</p>
+                    </div>
+                    <div class="col-md-2">
+                        <p>{{  $row->price  }} $</p>
+                    </div>
+                    <div class="col-md-2">
+                        <p>{{  $row->subtotal  }} $</p>
+                    </div>
+                    <div class="col-md-2">
+                        <p>{{  $row->total  }} $</p>
+                    </div>
                 </div>
-                <div class="col-md-2">
-                    <h5>Subtotal</h5>
-                </div>
-                <div class="col-md-2">
-                    <h5>Total</h5>
-                </div>
+                @endforeach
+
+
+
+
+                <!-- <hr> -->
             </div>
 
 
-            @foreach(Cart::content() as $row)
-            <div class="d-flex justify-content-center text-center">
-                <div class="col-md-2">
-                    <p>{{  $row->name  }}</p>
-                </div>
-                <!-- <div class="col-md-3">
-                    <p class="">Add special request</p>
-                </div> -->
-                <div class="col-md-2">
-                    <p>{{  $row->qty  }}</p>
-                </div>
-                <div class="col-md-2">
-                    <p>{{  $row->price  }} $</p>
-                </div>
-                <div class="col-md-2">
-                    <p>{{  $row->subtotal  }} $</p>
-                </div>
-                <div class="col-md-2">
-                    <p>{{  $row->total  }} $</p>
-                </div>
-            </div>
-            @endforeach
-
-
-
-
-            <!-- <hr> -->
         </div>
 
 
-    </div>
-
-
-    <div class="container-fluid bkgroud p-5">
-        <h3>Payment Summary</h3>
-        <div class="row">
-            <div class="col-md-6">
-                <form action="/action_page.php" class="formz">
-
-                <label for="card-verif">Address</label><br>
-                <textarea name="address" class="form-control" id="address" cols="5" rows="5">{{ auth()->user()->location }}</textarea>
+        <div class="container-fluid bkgroud p-5">
+            <h3>Payment Summary</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="card-verif">Address</label><br>
+                    <textarea name="address" class="form-control" id="address" cols="5"
+                        rows="5">{{ auth()->user()->location }}</textarea>
 
                     <label for="cardex-date">Card Expiry date</label><br>
                     <select id="cardex-date" name="cardex-date">
@@ -111,7 +110,9 @@
                     <input type="checkbox" name="" id="checdd">
                     <label for="checdd" class="para">for faster and more secure checkout,save your card
                         details</label>
-                    <button type="button" class="butbut">Place Order</button </form> </div> <div class="col-md-6 mt-5">
+                    <button type="submit" class="butbut">Place Order</button>
+                </div>
+                <div class="col-md-6 mt-5">
                     <div class="d-flex justify-content-between">
                         <p>Subtotal</p>
                         <p>{{Cart::subtotal()}} $</p>
@@ -125,9 +126,14 @@
                         <p>Total Amount</p>
                         <p>{{Cart::total()}} $</p>
                     </div>
+                </div>
             </div>
         </div>
+
+        @else
+            <div class="text-center">Add something to buy</div>
+        @endif
     </div>
-</div>
-</div>
+    </div>
+</form>
 @stop

@@ -17,24 +17,28 @@ class tables extends Seeder
         tablesM::create(array(
 
             'class' => 1,
+            'reserved' => 0,
 
         ));
 
         tablesM::create(array(
 
             'class' => 1,
+            'reserved' => 1,
 
         ));
 
         tablesM::create(array(
 
             'class' => 1,
+            'reserved' => 0,
 
         ));
 
         tablesM::create(array(
 
             'class' => 1,
+            'reserved' => 1,
 
         ));
 
@@ -45,24 +49,28 @@ class tables extends Seeder
         tablesM::create(array(
 
             'class' => 2,
+            'reserved' => 0,
 
         ));
 
         tablesM::create(array(
 
             'class' => 2,
+            'reserved' => 0,
 
         ));
 
         tablesM::create(array(
 
             'class' => 2,
+            'reserved' => 1,
 
         ));
 
         tablesM::create(array(
 
             'class' => 2,
+            'reserved' => 0,
 
         ));
 
@@ -70,24 +78,28 @@ class tables extends Seeder
         tablesM::create(array(
 
             'class' => 3,
+            'reserved' => 0,
 
         ));
 
         tablesM::create(array(
 
             'class' => 3,
+            'reserved' => 1,
 
         ));
 
         tablesM::create(array(
 
             'class' => 3,
+            'reserved' => 1,
 
         ));
 
         tablesM::create(array(
 
             'class' => 3,
+            'reserved' => 0,
 
         ));
 
@@ -98,24 +110,28 @@ class tables extends Seeder
         tablesM::create(array(
 
             'class' => 4,
+            'reserved' => 0,
 
         ));
 
         tablesM::create(array(
 
             'class' => 4,
+            'reserved' => 0,
 
         ));
 
         tablesM::create(array(
 
             'class' => 4,
+            'reserved' => 0,
 
         ));
 
         tablesM::create(array(
 
             'class' => 4,
+            'reserved' => 1,
 
         ));
 

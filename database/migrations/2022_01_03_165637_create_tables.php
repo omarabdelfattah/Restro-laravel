@@ -17,6 +17,7 @@ class CreateTables extends Migration
             $table->id();
             $table->timestamps();
             $table->integer('class');
+            $table->boolean('reserved')->default(0);
         });
     }
 

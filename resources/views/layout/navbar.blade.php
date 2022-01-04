@@ -13,6 +13,8 @@
   <script src="{{asset('assets\template\js\sweetalert2.all.min.js')}}"></script>
 
   <link rel="shortcut icon" href="{{asset("assets/template/images/logo.png")}}" type="image/x-icon">  
+  <link rel="shortcut icon" href="{{asset('assets/template/images/logo.png')}}" type="image/x-icon"> 
+  <link href="{{asset('assets\template\css\bootstrap4-toggle.min.css')}}" rel="stylesheet"> 
   <title><?php echo $page_title; ?></title>
  <style>
 

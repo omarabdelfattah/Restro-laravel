@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             food::class,
             tables::class,
             users::class,
+            offers::class,
         ]);
     }
 }

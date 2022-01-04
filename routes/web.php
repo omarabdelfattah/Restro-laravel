@@ -6,6 +6,7 @@ use App\Http\Controllers\account;
 use App\Http\Controllers\offers;
 use App\Http\Controllers\tables;
 use App\Http\Controllers\categories;
+use App\Http\Controllers\cart;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,10 +26,11 @@ Route::get('gahez', function () {
 
 
 
-Route::get("/",             [landing::class,'index']          )->name('landing');
-Route::get("/offers",       [offers::class,'index']            )->name('offers');
-Route::get("/tables",       [tables::class,'index']            )->name('tables');
+Route::get("/",             [landing::class,'index']       )->name('landing');
+Route::get("/offers",       [offers::class,'index']        )->name('offers');
+Route::get("/tables",       [tables::class,'index']        )->name('tables');
 Route::get("/cat/{id}",     [categories::class,'index']    )->name('cat');
+Route::post("/add_to_cart", [cart::class,    'add_to_cart']      )->name('add_to_cart');
 
 Route::group(['middleware' => 'guest' ],function(){
     Route::get("/login",            [account::class,    'Showlogin']            )->name('login');
@@ -38,5 +40,5 @@ Route::group(['middleware' => 'guest' ],function(){
 });
 
 Route::group(['middleware' => 'auth' ],function(){
-    Route::get("/logout",     [account::class,'logout']         )->name('logout');
+    Route::get("/logout",                   [account::class,'logout']                   )->name('logout');
 });

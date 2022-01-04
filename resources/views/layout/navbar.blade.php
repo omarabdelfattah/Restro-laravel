@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="{{asset('assets/template/css/owl.theme.default.min.css')}}">
   <link rel="stylesheet" href="{{asset('assets/template/css/font-awesome.min.css')}}">
   <link rel="stylesheet" href="{{asset('assets/template/css/style.css')}}">
+  <script src="{{asset('assets\template\js\sweetalert2.all.min.js')}}"></script>
+
   <link rel="shortcut icon" href="{{asset("assets/template/images/logo.png")}}" type="image/x-icon">  
   <title><?php echo $page_title; ?></title>
  <style>

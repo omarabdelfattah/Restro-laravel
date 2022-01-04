@@ -10,7 +10,8 @@
   <link rel="stylesheet" href="{{asset('assets/template/css/owl.theme.default.min.css')}}">
   <link rel="stylesheet" href="{{asset('assets/template/css/font-awesome.min.css')}}">
   <link rel="stylesheet" href="{{asset('assets/template/css/style.css')}}">
-  <link rel="shortcut icon" href="{{asset("assets/template/images/logo.png")}}" type="image/x-icon">  
+  <link rel="shortcut icon" href="{{asset('assets/template/images/logo.png')}}" type="image/x-icon"> 
+  <link href="{{asset('assets\template\css\bootstrap4-toggle.min.css')}}" rel="stylesheet"> 
   <title><?php echo $page_title; ?></title>
  <style>
 

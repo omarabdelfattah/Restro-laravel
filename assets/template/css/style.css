@@ -185,4 +185,48 @@ margin-right: 10px;
 }
 
 
+/************** Checkout Page ****************/
 
+.checkout .formz{
+  border: 2.5px #ff9900 solid;
+  border-radius: 15px;
+  padding: 40px;
+  margin: 20px;
+}
+.checkout .widtho{
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+}
+.checkout hr{
+  background-color: #ff9900;
+}
+.checkout .para{
+  font-size: 12px;
+}
+.checkout .butbut{
+  /* margin-top: 30px; */
+  font-size: 1.5rem;
+  float: right;
+  margin-right: 20px;
+  color: aliceblue;
+  background-color: #ff9900;
+  border: 3px solid #ff6600;
+  border-radius: 20px;
+}
+.checkout .butbut:hover{
+  color: #ff9900;
+  background-color: aliceblue;
+  border: 3px solid aliceblue;
+}
+.checkout h3{
+  font-weight: 600 !important;
+  text-align: center;
+  margin:20px 0px  30px 0px !important;
+}
+.checkout h5{
+  margin-bottom: 20px !important;
+}
+.checkout .bkgroud{
+  background-color: rgb(243, 243, 243);
+}

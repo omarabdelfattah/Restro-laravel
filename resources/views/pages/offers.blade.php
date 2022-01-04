@@ -8,8 +8,8 @@
     <div class="product t py-2 ">
       <h3 class="text-lef" id="pro">Offers </h3>
       <div class="row justify-content-center text-left">
-
-        <div class="card col-md-4 text-center" style="">
+            @foreach($food as $meal)
+            <div class="card col-md-4 text-center" style="">
           <img class="card-img-top" src="assets/pizza.jpg" alt="Card image cap" style="margin-top : 20px;">
 
           <div class="card-body">

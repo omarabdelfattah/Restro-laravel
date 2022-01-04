@@ -38,7 +38,7 @@
                         <h3>$ {{ $meal->old_price }}</h3>
                     </del>
                     <h3>$ {{ $meal->new_price }}</h3>
-                    <p class="card-text" style="margin: 20px;">  <input type="number" value="1" min="1" max="1000" step="1" class="spinner" style="width: 50%;"/> </p>
+                    <p class="card-text" style="margin: 20px;">  <input type="number" name="quantity" value="1" min="1" max="1000" step="1" class="spinner" style="width: 50%;"/> </p>
                     <button type="submit" class="btn" style="background-color: #FF9900; color:white;">Add</button>
                 </form>                
               </div>

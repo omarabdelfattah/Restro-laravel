@@ -48,6 +48,10 @@
                         </div>
                     </div>
                     <div class="d-flex justify-content-around m-4">
-                        <input class="btnn in1" type="button" value="Confirm">
+                        @if( auth()->check() )
+                            <input class="btnn in1" type="button" value="Confirm">
+                        @else
+                            <button class="btnn in1" type="button" value="">Login to continue</button>
+                        @endif
                     </div>
             </div>

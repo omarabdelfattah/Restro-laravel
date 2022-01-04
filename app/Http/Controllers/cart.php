@@ -9,24 +9,31 @@ class cart extends Controller
 {
     public function add_to_cart(Request $request){
 
-        // $product  = foodM::findOrFail($request->product_id);   
-        // $cart = session(['id' =>$product->id , 'qty' => $request->quantity]);
-        // return redirect()->back()->withSuccess('Added to cart !');
 
-        $product  = foodM::findOrFail($request->product_id);   
-        \Cart::add([
-                    'id' =>$product->id ,
-                    'name' => $product->name , 
-                    'qty' => $request->quantity,
-                    'price' => $product->price , 
-                    'weight' => 0,
-                    'options' => [
-                        'img' => $product->image,
-                        'tax'   => 0.14,
-                    ],
-                ]);
+        $product  = foodM::with('offers')->findOrFail($request->product_id);
+
+        if(!empty($product->offers->first()->new_price)){
+
+           $price = $product->offers->first()->new_price;
+
+        }else{
+            $price = $product->price;
+        }
+        $row = \Cart::add([
+            'id' =>$product->id ,
+            'name' => $product->name , 
+            'qty' => $request->quantity,
+            'price' => $price , 
+            'weight' => 0,
+            'discount' => 20,
+        ]);
         
-        return redirect()->back()->withSuccess('Added to cart !');
+        if($row){
+             return redirect()->back()->withSuccess('Added to cart !');
+        }else{
+            return redirect()->back();
+        }
+
     }
     public function remove_from_cart($rowId){
         \Cart::remove($rowId);

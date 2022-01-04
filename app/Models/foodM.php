@@ -13,4 +13,8 @@ class foodM extends Model
     public function offers(){
         return $this->hasMany(offersM::class,"food_id","id");
     }
+    public function hasOffers(): bool
+{
+    return $this->offers()->exists();
+}
 }

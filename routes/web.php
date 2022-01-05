@@ -32,9 +32,9 @@ Route::get("/offers",       [offers::class,'index']        )->name('offers');
 Route::get("/tables",       [tables::class,'index']        )->name('tables');
 Route::get("/cat/{id}",     [categories::class,'index']    )->name('cat');
 
-Route::post("/add_to_cart", [cart::class,    'add_to_cart']      )->name('add_to_cart');
-Route::get("/remove_from_cart/{id}", [cart::class,    'remove_from_cart']      )->name('remove_from_cart');
-Route::get("/remove_all", [cart::class,    'remove_all']      )->name('remove_all');
+Route::post("/add_to_cart", [cart::class,               'add_to_cart']      )->name('add_to_cart');
+Route::get("/remove_from_cart/{id}", [cart::class,      'remove_from_cart']      )->name('remove_from_cart');
+Route::get("/remove_all", [cart::class,    'remove_all'] )->name('remove_all');
 
 
 
@@ -49,5 +49,6 @@ Route::group(['middleware' => 'auth' ],function(){
     Route::get("/logout",                   [account::class,'logout']                   )->name('logout');
     Route::get("/checkout", [checkout::class,    'index']      )->name('checkout');
     Route::post("/checkout", [checkout::class,    'order_confirm']      )->name('checkout');
-    
+    Route::post("/reserve_table", [tables::class,    'reserve_table']      )->name('reserve_table');
+
 });

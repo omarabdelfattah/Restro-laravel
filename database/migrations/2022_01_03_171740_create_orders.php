@@ -17,8 +17,8 @@ class CreateOrders extends Migration
             $table->id();
             $table->timestamps();
             $table->text('address');
-            $table->date('order_time');
-            $table->date('num_of_people');
+            // $table->date('order_time');
+            // $table->date('num_of_people');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
         });

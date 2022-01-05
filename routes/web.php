@@ -37,8 +37,6 @@ Route::get("/remove_from_cart/{id}", [cart::class,    'remove_from_cart']      )
 Route::get("/remove_all", [cart::class,    'remove_all']      )->name('remove_all');
 
 
-Route::get("/checkout", [checkout::class,    'index']      )->name('checkout');
-Route::post("/checkout", [checkout::class,    'order_confirm']      )->name('checkout');
 
 Route::group(['middleware' => 'guest' ],function(){
     Route::get("/login",            [account::class,    'Showlogin']            )->name('login');
@@ -49,4 +47,7 @@ Route::group(['middleware' => 'guest' ],function(){
 
 Route::group(['middleware' => 'auth' ],function(){
     Route::get("/logout",                   [account::class,'logout']                   )->name('logout');
+    Route::get("/checkout", [checkout::class,    'index']      )->name('checkout');
+    Route::post("/checkout", [checkout::class,    'order_confirm']      )->name('checkout');
+    
 });

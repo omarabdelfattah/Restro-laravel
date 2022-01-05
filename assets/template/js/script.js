@@ -1,4 +1,9 @@
 $(document).ready(function(){
+
+    $("body").niceScroll();
+    $(".floating_cart").niceScroll();
+    
+
     $('.count').prop('disabled', true);
        $(document).on('click','.plus',function(){
         $('.count').val(parseInt($('.count').val()) + 1 );

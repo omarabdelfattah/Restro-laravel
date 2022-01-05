@@ -3,6 +3,7 @@
   </div>
 
 <div class="col-md-4 mt-2 floating_cart">
+    <div id="content">
                     <div class="d-flex part1 justify-content-around">
                         <div class="d-flex mt-3">
                             <img src="{{asset('assets/template/images/shopping-cart (1).png')}}" alt="cart">
@@ -54,4 +55,5 @@
                             <button class="btnn in1" type="button" value="">Login to continue</button>
                         @endif
                     </div>
+            </div>
             </div>

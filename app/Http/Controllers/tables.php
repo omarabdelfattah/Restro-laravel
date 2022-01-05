@@ -20,6 +20,6 @@ class tables extends Controller
                                     ->with('tables_4',$tables_4);
     }  
     public function reserve_table(Request $request){
-        $tables
+
     }
 }

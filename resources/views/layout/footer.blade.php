@@ -75,8 +75,9 @@
     <script src="{{asset('assets\template\js\popper.min.js')}}"></script>
     <script src="{{asset('assets\template\js\bootstrap.min.js')}}"></script>
     <script src="{{asset('assets\template\js\bootstrap-input-spinner.js')}}"></script>
+    <script src="{{asset('assets\template\js\jquery.nicescroll.min.js')}}"></script>
     <script src="{{asset('assets\template\js\script.js')}}"></script>
- 
+    
     <script src="{{asset('assets\template\js\bootstrap4-toggle.min.js')}}"></script>
 </body>
 </html>

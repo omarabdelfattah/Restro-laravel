@@ -7,11 +7,8 @@ use Tests\TestCase;
 
 class ExampleTest extends TestCase
 {
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
+
+    
     public function test_example()
     {
         $response = $this->get('/');
@@ -19,23 +16,6 @@ class ExampleTest extends TestCase
         $response = $this->get('/register');
 
         $response->assertStatus(200);
-    }
-    public function test_it_redirects_guest_to_login_when_he_visit_home_page()
-    {
-        $response = $this->get()->Route('checkout');
-
-        $response->assertRedirect('/login');
-    }
-
-   public function test_it_allow_logged_in_user_to_visit_home_page()
-    {
-        $user = factory(User::class)->create();
-
-        $this->actingAs($user);
-
-        $response = $this->get('/');
-
-        $response->assertOk();
     }
 
     public function testLoginPost(){
@@ -45,7 +25,44 @@ class ExampleTest extends TestCase
             'password' => bcrypt(1234),
             '_token' => csrf_token()
         ]);
-        $this->assertEquals(200, $response->getStatusCode());
-        $this->assertEquals('auth.login', $response->original->name());
+        $response->assertSessionHasErrors();
+    }
+
+   public function test_it_allow_logged_in_user_to_visit_home_page()
+    {
+        \Session::start();
+
+
+        $response = $this->get('/');
+
+        $response->assertOk();
+    }
+
+
+
+    public function testRegisterPost(){
+        $name =  'fffkkk'.rand(3,99);
+        $user = [
+            'name' => $name,
+            'email' => 'fffkkk'.rand(3,99).'@omar.com',
+            'password' => bcrypt(1234),
+            'location' => "el ramel station",
+            'phone' => 565464,
+            'gender' => 1,
+            'credit_card'    => '5465645656',
+
+        ];
+
+        $response = $this->post('/register', $user)
+        ->assertRedirect('/');
+
+        $this->assertDatabaseHas('users', ['name' => $name]);
+    }
+
+
+    public function test_it_redirects_guest_to_login_when_he_visit_checkout_page()
+    {
+        $response = $this->get('/checkout');
+        $response->assertRedirect('/login');
     }
 }

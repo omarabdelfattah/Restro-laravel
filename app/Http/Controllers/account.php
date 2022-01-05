@@ -37,7 +37,6 @@ class account extends Controller
         // return $request;
         $request['password'] = bcrypt($request->password);
         $user = User::create($request->all());
-        $payments = paymentsM::create([ 'credit_card' => $request->credit_card , 'user_id' => $user->id]);
         if(auth()->login($user) ) {
             return redirect()->Route('landing')->withSuccess('Registered successfully');
         }else{
